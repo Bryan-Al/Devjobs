@@ -47,13 +47,13 @@ class EditarVacante extends Component
         //encontrar la vacante a edit
        $vacante = Vacante::find($this->vacante_id);
 
-       //assignar la vacante
-       $vacante->titulo = $Datos = ['titulo'];
-       $vacante->salario_id = $Datos = ['salario'];
-       $vacante->categoria_id = $Datos = ['categoria'];
-       $vacante->empresa= $Datos = ['empresa'];
-       $vacante->fecha = $Datos = ['fecha'];
-       $vacante->Descripcion = $Datos = ['Descripcion'];
+            //assignar la vacante
+        $vacante->titulo = $Datos['titulo'];
+        $vacante->salario_id = $Datos['salario'];
+        $vacante->categoria_id = $Datos['categoria'];
+        $vacante->empresa= $Datos['empresa'];
+        $vacante->fecha = $Datos['fecha'];
+        $vacante->Descripcion = $Datos['Descripcion'];
 
        //guardar 
        $vacante->save();
@@ -62,7 +62,7 @@ class EditarVacante extends Component
            session()->flash('mensaje', 'la vancante se actualizo correctamente');
 
            //redireccionar
-           return redirect()->route('vacantes.edit');
+           return redirect()->route('vacantes.index');
        
     }
 
