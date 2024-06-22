@@ -35,7 +35,7 @@ class Crearvacante extends Component
         $Datos= $this->validate();
 
         //almacenar la imagen
-          $imagen = $this->imagen->store('public/vacantes/');
+          $imagen = $this->imagen->store('public/vacantes');
           $Datos['imagen'] = str_replace('public/vacantes/', '', $imagen);
 
           //dd($nombreImagen);
